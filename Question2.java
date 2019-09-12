@@ -122,12 +122,22 @@ public class Question2 {
 	{
 		int a[] = {-10, -5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 
 					13, 14, 15, 16, 20, 34, 99, 100, 200, 10000};
+		
+		int firstArray[] = {1,2,3,4,5,6};
+		int secondArray[] = {1,1,1,1,1,6};
+		int thirdArray[] = {1,2,5,3,5,5, 10, 20, 1000, 5, 100};
+		int fourthArray[] =  {0,2,3,5, 4, 8, 9, 100};
+		
 
+	
+		/*
 		System.out.println("Searching the array");
 		for (int element : a)
 			System.out.print(element + " ");
 		System.out.println();	
-		System.out.println();	
+		*/
+
+		/*
 
 		if (Question2.interpolationSearch(a, 14)) 
 			System.out.println("PASSES: 14 was found");
@@ -163,6 +173,7 @@ public class Question2 {
 			System.out.println("FAILS: 35 was found");
 		else 
 			System.out.println("PASSES: 35 was not found");
+			*/
 	} 
 } 
 
