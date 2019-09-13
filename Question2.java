@@ -5,6 +5,7 @@ public class Question2 {
 	{
 		int rightIndex=array.length-1;
 		int leftIndex=0;
+		int testCounter = 0;
 		/*
 		 * We will assume that every value in the array
 		 * to the right of rightIndex but not including rightIndex
@@ -18,12 +19,14 @@ public class Question2 {
 		int count=0;
 		while(leftIndex<=rightIndex)
 		{
-			System.out.println("Executed");
+			testCounter++;
 			count=count+1;
 			//System.out.println(count);
 			int middleIndex=(rightIndex+leftIndex)/2;
-			if (array[middleIndex]==targetValue)
+			if (array[middleIndex]==targetValue) {
+				System.out.println("Execution number: " + testCounter);
 				return true;
+			}
 			else if (array[middleIndex]<targetValue)
 				leftIndex=middleIndex+1;
 			else 
@@ -37,6 +40,7 @@ public class Question2 {
 		 * a) leftIndex<rightIndex 
 		 * b) leftIndex<=rightIndex
 		 */
+		System.out.println("Test failed, Execution number: " + testCounter);
 		return false;
 		
 	}
@@ -49,12 +53,14 @@ public class Question2 {
 		 * middleIndex but instead calculate the index using the function provided to you 
 		 * which is called findIndex. 
 		 */
+		int testCounter = 0;
 		System.out.println("Interpolation search");
 		int left = 0, right = a.length - 1;
 		while(left <= right) {
-			System.out.println("Executed");
+			testCounter++;
 			int index = findIndex(a, left, right, desiredItem);
 			if(a[index] == desiredItem) {
+				System.out.println("Execution number: " + testCounter);
 				return true;
 			} else if(a[index] < desiredItem) {
 				left = index + 1;
@@ -62,8 +68,7 @@ public class Question2 {
 				right = index - 1;
 			}
 		}
-	
-	
+		System.out.println("Test failed, Execution number: " + testCounter);
 		return false; 
 	
 	} 
@@ -76,15 +81,18 @@ public class Question2 {
 		 * Every value to the left of index (not including index),
 		 * have been looked at. 
 		 */
+		int testCounter = 0;
 		
 		int count=0;
 		while(index<lengthOfArray)
 		{
-			System.out.println("Executed");
+			testCounter++;
 			count=count+1;
 			//System.out.println(count);
-			if(array[index]==targetElement)
+			if(array[index]==targetElement) {
+				System.out.println("Execution number: " + testCounter);
 				return true;
+			}
 			index=index+1;
 		}
 		/*
@@ -94,6 +102,7 @@ public class Question2 {
 		 * a) index==lengthOfArray
 		 * b) index==lengthOfArray-1 
 		 */
+		System.out.println("Test failed, Execution number: " + testCounter);
 		return false;
 	}
 
@@ -136,15 +145,9 @@ public class Question2 {
 		int sixthArray[] = {1,1,1,1,1,1,100,100,100,100,100,100}; // search for 99
 		int seventhArray[] = {1,1,1,1,1,1,1,1,1,1}; // search for 2
 		
-		linearSearch(fifthArray, 5);
-		binarySearch(fifthArray, 5);
-		interpolationSearch(fifthArray, 5);
-		
-		
-		linearSearch(fifthArray, 10);
-		binarySearch(fifthArray, 10);
-		interpolationSearch(fifthArray, 10);
-		
+		linearSearch(firstArray, 5);
+		binarySearch(firstArray, 5);
+		interpolationSearch(firstArray, 5);
 		
 	
 		/*
