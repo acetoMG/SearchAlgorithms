@@ -14,11 +14,13 @@ public class Question2 {
 		 * to the left of leftIndex but not including leftIndex
 		 * have all been looked at.
 		 */
+		System.out.println("Binary search");
 		int count=0;
 		while(leftIndex<=rightIndex)
 		{
+			System.out.println("Executed");
 			count=count+1;
-			System.out.println(count);
+			//System.out.println(count);
 			int middleIndex=(rightIndex+leftIndex)/2;
 			if (array[middleIndex]==targetValue)
 				return true;
@@ -26,7 +28,6 @@ public class Question2 {
 				leftIndex=middleIndex+1;
 			else 
 				rightIndex=middleIndex-1;
-			System.out.println("Executed");
 		}
 		/*
 		 * You want to make sure that when the loop terminates
@@ -48,8 +49,10 @@ public class Question2 {
 		 * middleIndex but instead calculate the index using the function provided to you 
 		 * which is called findIndex. 
 		 */
+		System.out.println("Interpolation search");
 		int left = 0, right = a.length - 1;
 		while(left <= right) {
+			System.out.println("Executed");
 			int index = findIndex(a, left, right, desiredItem);
 			if(a[index] == desiredItem) {
 				return true;
@@ -58,7 +61,6 @@ public class Question2 {
 			} else {
 				right = index - 1;
 			}
-			System.out.println("Executed");
 		}
 	
 	
@@ -69,6 +71,7 @@ public class Question2 {
 	{
 		int lengthOfArray=array.length;
 		int index=0;
+		System.out.println("Linear search");
 		/*
 		 * Every value to the left of index (not including index),
 		 * have been looked at. 
@@ -77,12 +80,12 @@ public class Question2 {
 		int count=0;
 		while(index<lengthOfArray)
 		{
+			System.out.println("Executed");
 			count=count+1;
-			System.out.println(count);
+			//System.out.println(count);
 			if(array[index]==targetElement)
 				return true;
 			index=index+1;
-			System.out.println("Executed");
 		}
 		/*
 		 * Ask yourself, what must index be, after the loop terminates
@@ -127,8 +130,22 @@ public class Question2 {
 		int secondArray[] = {1,1,1,1,1,6};
 		int thirdArray[] = {1,2,5,3,5,5, 10, 20, 1000, 5, 100};
 		int fourthArray[] =  {0,2,3,5, 4, 8, 9, 100};
-		
 
+
+		int fifthArray[] = {1,2,3,4,5,6,7,8,9,10}; // search for 5 and 10
+		int sixthArray[] = {1,1,1,1,1,1,100,100,100,100,100,100}; // search for 99
+		int seventhArray[] = {1,1,1,1,1,1,1,1,1,1}; // search for 2
+		
+		linearSearch(fifthArray, 5);
+		binarySearch(fifthArray, 5);
+		interpolationSearch(fifthArray, 5);
+		
+		
+		linearSearch(fifthArray, 10);
+		binarySearch(fifthArray, 10);
+		interpolationSearch(fifthArray, 10);
+		
+		
 	
 		/*
 		System.out.println("Searching the array");
