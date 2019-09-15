@@ -145,9 +145,55 @@ public class Question2 {
 		int sixthArray[] = {1,1,1,1,1,1,100,100,100,100,100,100}; // search for 99
 		int seventhArray[] = {1,1,1,1,1,1,1,1,1,1}; // search for 2
 		
+		//searching for 100
+		linearSearch(fifthArray, 100);
+		binarySearch(fifthArray, 100);
+		interpolationSearch(fifthArray, 100);
+		
+		System.out.println();
+		
+		//searching for 5
+		linearSearch(fifthArray, 5);
+		binarySearch(fifthArray, 5);
+		interpolationSearch(fifthArray, 5);
+		
+		System.out.println();
+		
+		//searching for 10
+		linearSearch(fifthArray, 10);
+		binarySearch(fifthArray, 10);
+		interpolationSearch(fifthArray, 10);
+		
+		System.out.println();
+		
+		//searching for 99
+		linearSearch(sixthArray, 99);
+		binarySearch(sixthArray, 99);
+		interpolationSearch(sixthArray, 99);
+		
+		System.out.println();
+		
+		//searching for 2
+		linearSearch(seventhArray, 2);
+		binarySearch(seventhArray, 2);
+		interpolationSearch(seventhArray, 2);
+		
+		System.out.println();
+		
+		//searching for 5
 		linearSearch(firstArray, 5);
 		binarySearch(firstArray, 5);
 		interpolationSearch(firstArray, 5);
+		
+		System.out.println();
+		
+		//searching for 6
+		linearSearch(secondArray, 6);
+		binarySearch(secondArray, 6);
+		interpolationSearch(secondArray, 6);
+				
+				
+		
 		
 	
 		/*
